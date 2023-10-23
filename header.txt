@@ -1,0 +1,33 @@
+<i class="fa-solid fa-bars" style="color: #005cfa;"></i>
+
+<image src="./images/logo_hololive.svg" title="hololive" height="45px">
+
+<i class="fa-solid fa-microphone" style="color: #005eff;"></i>
+
+
+
+<div id="col">
+        <div class="float-left">
+          <img src="./images/10-10-10.jpg" alt="天音かなた現">
+          <img src="./images/10-10.jpg" alt="天音かなた原">
+        </div>
+        <p class="pp clear-left">
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/10-10-10-10.jpg" title="天音かなた"></td>
+            <td width=220px>
+              <h2 title="演技力試されつつ先輩のモノマネをしてみた結果【ホロライブ4期生/天音かなた】">演技力試されつつ先輩のモノマネをしてみた結果【ホロライブ4期生/天音かなた】</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td title="Kanata Ch. 天音かなた">Kanata Ch. 天音かなた</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td>觀看次數：18萬次·3 年前</td>
+          </tr>
+        </table>
+      </div>

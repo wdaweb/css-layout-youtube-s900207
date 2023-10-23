@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/all.css" type="text/css">
+  <style>
+    * {
+      margin: 0;
+    }
+
+    #header {
+      width: 100%;
+      height: 60px;
+      background: lightblue;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      z-index: 1000;
+    }
+
+    .box1 {
+      width: 25%;
+      height: 60px;
+      /* background: red; */
+      padding: auto;
+      display: inline-block;
+    }
+
+    #button1 {
+      width: 40px;
+      height: 40px;
+      border: 0px;
+      border-radius: 50%;
+      background: none;
+      margin-left: 20px;
+    }
+
+    #button1:hover {
+      border: 1px solid deepskyblue;
+      background: deepskyblue;
+    }
+
+    .box2 {
+      width: 50%;
+      height: 60px;
+      /* background: green; */
+      display: inline-block;
+    }
+
+    #box2 table {
+      border-collapse: collapse;
+    }
+
+    .searching {
+      border: #005eff solid 1px;
+      border-radius: 2em 0 0 2em;
+      width: 650px;
+      height: 42px;
+      box-shadow: 0px 0px 5px #00bfff;
+      margin: 5px auto;
+      /* background: blue; */
+      padding-left: 10px;
+    }
+
+    #search {
+      width: 600px;
+      height: 40px;
+      border: none;
+      font-size: 16px;
+      color: #005eff;
+      margin: 0px 5px;
+      background-color: lightblue;
+    }
+
+    #button4 {
+      width: 40px;
+      height: 44px;
+      border: 0px;
+      border-radius: 0 50% 50% 0;
+      border: 1px solid #005eff;
+      background: deepskyblue;
+      margin-left: -4px;
+      vertical-align: 10px;
+    }
+
+    #button4:hover {
+      border: 1px solid deepskyblue;
+      background: deepskyblue;
+      cursor: pointer;
+    }
+
+    #button5 {
+      width: 40px;
+      height: 40px;
+      border: 0px;
+      border-radius: 50%;
+      background: none;
+      margin-left: 2px;
+    }
+
+    #button5:hover {
+      border: 1px solid deepskyblue;
+      background: deepskyblue;
+      cursor: pointer;
+    }
+
+
+    .box3 {
+      width: 25%;
+      height: 60px;
+      /* background: pink; */
+      display: inline-block;
+    }
+
+    #button2 {
+      width: 40px;
+      height: 40px;
+      border: 0px;
+      border-radius: 50%;
+      background: none;
+      margin-left: 310px;
+      vertical-align: -15px;
+
+    }
+
+    #button2:hover {
+      border: 1px solid deepskyblue;
+      background: deepskyblue;
+      cursor: pointer;
+    }
+
+    #button3 {
+      width: 97px;
+      height: 34px;
+      border: 1px solid deepskyblue;
+      border-radius: 20px 20px 20px 20px;
+      margin: 5px;
+      background: none;
+      margin-top: 8px;
+    }
+
+    #button3:hover {
+      background: deepskyblue;
+      cursor: pointer;
+    }
+
+    #sidebar {
+      /* view port height */
+      height: calc(100vh - 60px);
+      width: 15%;
+      background: white;
+      position: fixed;
+      left: 0;
+      top: 60px;
+      color: black;
+      overflow-y: auto;
+    }
+
+    #sidebar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      padding-left: 0.5rem;
+    }
+
+    p {
+      padding-left: 30px;
+      padding-right: 5px;
+    }
+
+    #sidebar li {
+      list-style: none;
+      line-height: 2;
+      margin-left: -40px;
+      padding-left: 40px;
+    }
+
+    #sidebar li a {
+      text-decoration: none;
+      display: block;
+    }
+
+
+    #sidebar li:hover {
+      background: lightblue;
+      display: block;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    #sidebar button {
+      width: 97px;
+      height: 34px;
+      border: 1px solid deepskyblue;
+      border-radius: 20px 20px 20px 20px;
+      margin: 5px;
+      background: none;
+      margin-left: 20px;
+    }
+
+    #sidebar button:hover {
+      background: deepskyblue;
+      cursor: pointer;
+    }
+
+    #sidebar hr {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+
+    }
+
+    #content {
+      width: calc(100% - 15%);
+      margin-left: 15%;
+      /* background: lightgreen; */
+      overflow-y: auto;
+      margin-top: 60px;
+    }
+
+    .box4 {
+      display: inline-block;
+      margin-left: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+    }
+
+    #button6 {
+      border-radius: 10px;
+      padding: 5px 10px;
+      margin-left: 10px;
+      background: white;
+      border: 1px solid #00bfff;
+      box-shadow: inset 0px 0px 5px #00bfff;
+      color: #005cfa;
+    }
+
+    #button6:hover {
+      cursor: pointer;
+      border: 0;
+      background: #005cfa;
+      color: white;
+    }
+
+    .box5 {
+      margin: 10px;
+      /* background: deeppink; */
+      overflow: hidden;
+    }
+
+    #col {
+      width: 300px;
+      height: 300px;
+      margin: 5px;
+      /* border: 1px solid #005cfa; */
+      display: inline-block;
+
+    }
+
+    .float-left {
+      position: relative;
+      padding-right: 1px;
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .float-left img {
+      position: absolute;
+      padding-right: 1px;
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .float-left img:last-child:hover {
+      opacity: 0;
+    }
+
+
+    .float-left2 {
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+    }
+
+    h2 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 200px;
+      margin-bottom: -5px;
+    }
+
+    .b {
+      font-size: 14px;
+      color: grey;
+    }
+
+
+    #button8 {
+      width: 40px;
+      height: 40px;
+      border: 0px;
+      border-radius: 50%;
+      background: none;
+      margin-left: 2px;
+    }
+
+    #button8:hover {
+      border: 1px solid deepskyblue;
+      background: deepskyblue;
+      cursor: pointer;
+    }
+
+    .box6 {
+      margin: 10px;
+      /* background: deeppink; */
+      overflow: hidden;
+    }
+
+    hr {
+      margin: 10px;
+    }
+
+    #col2 {
+      width: 210px;
+      height: 500px;
+      margin: 5px;
+      /* border: 1px solid #005cfa; */
+      display: inline-block;
+    }
+
+    .float-left3 {
+      position: relative;
+      padding-right: 1px;
+      width: 210px;
+      height: 400px;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .float-left3 img {
+      position: absolute;
+      padding-right: 1px;
+      width: 210px;
+      height: 400px;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .float-left3 img:last-child:hover {
+      opacity: 0;
+    }
+
+    #button9 {
+      width: 40px;
+      height: 40px;
+      border: 0px;
+      border-radius: 50%;
+      background: none;
+      margin-left: 2px;
+    }
+
+    #button9:hover {
+      border: 1px solid deepskyblue;
+      background: deepskyblue;
+      cursor: pointer;
+    }
+
+    .box7 {
+      margin: 10px;
+      /* background: deeppink; */
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <div class="box1">
+      <table>
+        <tr>
+          <td><button id="button1"><i class="fa-solid fa-bars fa-xl" style="color: #005eff;"></i></button>
+          </td>
+          <td><a href="./calc.html">
+              <image src="./images/logo_hololive.svg" alt="holotube首頁" width="100px" height="50px"></image>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="box2">
+      <table>
+        <tr>
+          <td>
+            <div class="searching">
+              <i class="fa-solid fa-magnifying-glass" style="color: #005eff;"></i>
+              <input type="text" id="search" value="搜索">
+            </div>
+          </td>
+          <td>
+            <button id="button4"><i class="fa-solid fa-magnifying-glass" style="color: #005eff;"></i></button>
+          </td>
+          <td>
+            <button id="button5"><i class="fa-solid fa-microphone" style="color: #005eff;"></i></button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+
+
+    <div class="box3">
+      <table>
+        <tr>
+          <td> <button id="button2"><i class="fa-solid fa-ellipsis-vertical fa-xl" style="color: #005eff;"></i></button>
+          </td>
+          <td><button id="button3"><i class="fa-solid fa-user-large" style="color: #005cfa;"></i>加入按鈕</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="sidebar">
+    <ul>
+      <li><a href="#" title="首頁"><i class="fa-solid fa-house" style="color: #015af4;"></i> 首頁</a></li>
+      <li><a href="#" title="卒業生"><i class="fa-solid fa-graduation-cap" style="color: #005eff;"></i></i> 卒業生</a></li>
+      <li><a href="#" title="訂閱內容"><i class="fa-solid fa-circle-check" style="color: #005eff;"></i> 訂閱內容</a></li>
+    </ul>
+    <hr>
+    <ul>
+      <li><a href="#" title="媒體庫"><i class="fa-solid fa-music" style="color: #005eff;"></i> 媒體庫</a></li>
+      <li><a href="#" title="觀看紀錄"><i class="fa-solid fa-clock-rotate-left" style="color: #005eff;"></i> 觀看紀錄</a>
+      </li>
+    </ul>
+    <hr>
+    <p>加入會員頻道即可對心儀的vtuber表示喜歡、獲得期間限定特製貼圖及捐助他們。</p>
+
+    <button><i class="fa-solid fa-user-large" style="color: #005cfa;"></i>加入按鈕</button>
+    </ul>
+    <hr>
+    <h3>探索vtuber</h3>
+    <ul>
+      <li><a href="#" title="發燒vtuber"><i class="fa-solid fa-fire" style="color: #005eff;"></i> 發燒vtuber</a></li>
+      <li><a href="#" title="音樂"><i class="fa-solid fa-music" style="color: #005eff;"></i> 音樂</a></li>
+      <li><a href="#" title="電影"><i class="fa-solid fa-film" style="color: #005eff;"></i> 電影</a></li>
+      <li><a href="#" title="直播"><i class="fa-solid fa-headset" style="color: #005eff;"></i> 直播</a></li>
+      <li><a href="#" title="遊戲"><i class="fa-solid fa-gamepad" style="color: #005eff;"></i> 遊戲</a></li>
+      <li><a href="#" title="新聞"><i class="fa-solid fa-newspaper" style="color: #005eff;"></i> 新聞</a></li>
+      <li><a href="#" title="體育"><i class="fa-solid fa-trophy" style="color: #005af5;"></i> 體育</a></li>
+      <li><a href="#" title="Podcast"><i class="fa-solid fa-podcast" style=" color: #005af5;"></i> Podcast</a></li>
+    </ul>
+    <hr>
+    <ul>
+      <li><a href="#" title=""><i class="fa-brands fa-searchengin" style="color: #005af5;"></i> 瀏覽頻道</a></li>
+    </ul>
+    <hr>
+    <h3>更多HoloTube資訊</h3>
+    <ul>
+      <li><a href="#" title="HoloTube Premium"><i class="fa-solid fa-play" style="color: #005eff;"></i> HoloTube
+          Premium</a></li>
+      <li><a href="#" title="HoloTube Music"><i class="fa-solid fa-play" style="color: #005eff;"></i> HoloTube
+          Music</a></li>
+      <li><a href="#" title="HoloTube Kids"><i class="fa-regular fa-face-kiss" style="color: #005eff;"></i> HoloTube
+          Kids</a></li>
+    </ul>
+    <hr>
+    <ul>
+      <li><a href="#" title="設定"><i class="fa-solid fa-gear" style="color: #005af5;"></i> 設定</a></li>
+      <li><a href="#" title="檢舉紀錄"><i class="fa-regular fa-flag" style="color: #005eff;"></i> 檢舉紀錄</a></li>
+      <li><a href="#" title="說明"><i class="fa-regular fa-flag" style="color: #005eff;"></i> 說明</a></li>
+      <li><a href="#" title="提供意見"><i class="fa-solid fa-skull" style="color: #005eff;"></i> 提供意見</a></li>
+    </ul>
+    <hr>
+    <p> &copy; 2023 HoloTube</p>
+  </div>
+  <div id="content">
+    <div class="box4">
+      <a href="#" title="全部"></a><button id="button6">全部</button></a>
+      <a href="#" title="音樂"></a><button id="button6">音樂</button></a>
+      <a href="#" title="直播中"></a><button id="button6">直播中</button></a>
+      <a href="#" title="動畫"></a><button id="button6">動畫</button></a>
+      <a href="#" title="遊戲"></a><button id="button6">遊戲</button></a>
+    </div>
+    <div class="box5">
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/1-1-1.jpg" alt="yagoo現">
+          <img src="./images/1-1.jpg" alt="yagoo原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/1-1-1-1.jpg" title="yagoo"></td>
+            <td width=220px>
+              <h2 title="Best Girl">Best Girl</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="yagoo">yagoo</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：1兆次·6 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/2-2-2.jpg" alt="ときのそら現">
+          <img src="./images/2-2.jpg" alt="ときのそら原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/2-2-2-2.jpg" title="ときのそら"></td>
+            <td width=220px>
+              <h2 title="ときのそらVR生放送アーカイブ">ときのそらVR生放送アーカイブ</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="SoraCh.ときのそらチャンネル">SoraCh.ときのそらチャンネル</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：40萬次·6 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/3-3-3.jpg" alt="彗星現">
+          <img src="./images/3-3.jpg" alt="彗星原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/3-3-3-3.jpg" title="星街彗星"></td>
+            <td width=220px>
+              <h2 title="【自己紹介】彗星の如くあらわれたアイドルVTuber！！！">【自己紹介】彗星の如くあらわれたアイドルVTuber！！！</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Suisei Channel">Suisei Channel</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：36萬次·5 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/4-4-4.jpg" alt="さくらみこ現">
+          <img src="./images/4-4.jpg" alt="さくらみこ原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/4-4-4-4.jpg" title="さくらみこ"></td>
+            <td width=220px>
+              <h2 title="【自己紹介】ウザカワ系バーチャル巫女アイドル！？さくらみこ、爆誕！">【自己紹介】ウザカワ系バーチャル巫女アイドル！？さくらみこ、爆誕！</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Miko Ch. さくらみこ">Miko Ch. さくらみこ</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：29萬次·5 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/5-5-5.jpg" alt="戌神ころね現">
+          <img src="./images/5-5.jpg" alt="戌神ころね原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/5-5-5-5.jpg" title="戌神ころね"></td>
+            <td width=220px>
+              <h2 title="【歌ってみた】スイートマジック 【戌神ころね】">【歌ってみた】スイートマジック 【戌神ころね】</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Korone Ch. 戌神ころね">Korone Ch. 戌神ころね</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：327萬次·4 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/6-6-6.jpg" alt="白上フブキ現">
+          <img src="./images/6-6.jpg" alt="白上フブキ原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/6-6-6-6.jpg" title="白上フブキ"></td>
+            <td width=220px>
+              <h2 title="【白上フブキ】クックパッドおすすめレシピソングを歌ってみた♪">【白上フブキ】クックパッドおすすめレシピソングを歌ってみた♪</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="フブキCh。白上フブキ ">フブキCh。白上フブキ </td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：9.8萬次·5 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/7-7-7.jpg" alt="湊あくあ現">
+          <img src="./images/7-7.jpg" alt="湊あくあ原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/7-7-7-7.jpg" title="湊あくあ"></td>
+            <td width=220px>
+              <h2 title="【自己紹介】はじめまして、湊あくあです！">【自己紹介】はじめまして、湊あくあです！</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Aqua Ch. 湊あくあ">Aqua Ch. 湊あくあ </td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：30萬次·5 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/8-8-8.jpg" alt="大空スバル現">
+          <img src="./images/8-8.jpg" alt="大空スバル原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/8-8-8-8.jpg" title="大空スバル"></td>
+            <td width=220px>
+              <h2 title="【ガチ恋】どぅーまいべすと！歌ってみた！【ぢろ】">【ガチ恋】どぅーまいべすと！歌ってみた！【ぢろ】</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Subaru Ch. 大空スバル ">Subaru Ch. 大空スバル </td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：456萬次·3 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/9-9-9.jpg" alt="兎田ぺこら現">
+          <img src="./images/9-9.jpg" alt="兎田ぺこら原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/9-9-9-9.jpg" title="兎田ぺこら"></td>
+            <td width=220px>
+              <h2 title="ディスコミュ星人/兎田ぺこら(cover)">ディスコミュ星人/兎田ぺこら(cover)</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Pekora Ch. 兎田ぺこら">Pekora Ch. 兎田ぺこら</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：2134萬次·3 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/10-10-10.jpg" alt="天音かなた現">
+          <img src="./images/10-10.jpg" alt="天音かなた原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/10-10-10-10.jpg" title="天音かなた"></td>
+            <td width=220px>
+              <h2 title="演技力試されつつ先輩のモノマネをしてみた結果【ホロライブ4期生/天音かなた】">演技力試されつつ先輩のモノマネをしてみた結果【ホロライブ4期生/天音かなた】</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Kanata Ch. 天音かなた">Kanata Ch. 天音かなた</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：18萬次·3 年前</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="box6">
+      <h2><i class="fa-solid fa-graduation-cap" style="color: #005eff;"></i>卒業生</h2>
+      <hr>
+      <div id="col2">
+        <div class="float-left3">
+          <img src="./images/11.jpg" alt="人見クリス現">
+          <img src="./images/11.jpg" alt="人見クリス原">
+        </div>
+        <table>
+          <tr>
+            <td>人見クリス</td>
+            <td><button id="button9"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td>觀看次數：666次</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="col2">
+        <div class="float-left3">
+          <img src="./images/12.jpg" alt="潤羽るしあ現">
+          <img src="./images/12-12.jpg" alt="潤羽るしあ原">
+        </div>
+        <table>
+          <tr>
+            <td>Rushia Ch. 潤羽るしあ</td>
+            <td><button id="button9"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td>觀看次數：141萬次</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="col2">
+        <div class="float-left3">
+          <img src="./images/13.jpg" alt="魔乃アロエ現">
+          <img src="./images/13.jpg" alt="魔乃アロエ原">
+        </div>
+        <table>
+          <tr>
+            <td>魔乃アロエ</td>
+            <td><button id="button9"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td>觀看次數：666次</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="col2">
+        <div class="float-left3">
+          <img src="./images/14.jpg" alt="桐生ココ現">
+          <img src="./images/14-14.jpg" alt="桐生ココ原">
+        </div>
+        <table>
+          <tr>
+            <td>Coco Ch. 桐生ココ</td>
+            <td><button id="button9"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td>觀看次數：141萬次</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="col2">
+        <div class="float-left3">
+          <img src="./images/15.jpg" alt="Tsukumo Sana現">
+          <img src="./images/15.jpg" alt="Tsukumo Sana原">
+        </div>
+        <table>
+          <tr>
+            <td>Tsukumo Sana Ch. hololive-EN</td>
+            <td><button id="button9"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td>觀看次數：34.4 萬次</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="col2">
+        <div class="float-left3">
+          <img src="./images/16.jpg" alt="Magni Dezmond現">
+          <img src="./images/16.jpg" alt="Magni Dezmond原">
+        </div>
+        <table>
+          <tr>
+            <td>Magni Dezmond Ch. HOLOSTARS-EN</td>
+            <td><button id="button9"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td>觀看次數：20.3萬次</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div id="col2">
+        <div class="float-left3">
+          <img src="./images/17.jpg" alt="Noir Vesper現">
+          <img src="./images/17.jpg" alt="Noir Vesper原">
+        </div>
+        <table>
+          <tr>
+            <td>Noir Vesper Ch. HOLOSTARS-EN</td>
+            <td><button id="button9"><i class="fa-solid fa-ellipsis-vertical" style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td>觀看次數：21.7萬次</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="box7">
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/18-18-18.jpg" alt="Mori Calliope現">
+          <img src="./images/18-18.jpg" alt="Mori Calliope原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/18-18-18-18.jpg" title="yagoo"></td>
+            <td width=220px>
+              <h2
+                title="[ORIGINAL SONG] 失礼しますが、RIP♡ || “Excuse My Rudeness, But Could You Please RIP?” - Calliope Mori ">
+                [ORIGINAL SONG] 失礼しますが、RIP♡ || “Excuse My Rudeness, But Could You Please RIP?” - Calliope Mori</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Mori Calliope Ch. hololive-EN ">Mori Calliope Ch. hololive-EN </td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：3816萬次·3 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/19-19-19.jpg" alt="Takanashi Kiara現">
+          <img src="./images/19-19.jpg" alt="Takanashi Kiara原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/19-19-19-19.jpg" title="Takanashi Kiara"></td>
+            <td width=220px>
+              <h2 title="The Rise of Kiara the Phoenix (Kiara vers.)">The Rise of Kiara the Phoenix (Kiara vers.)</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Takanashi Kiara Ch.hololive-EN ">Takanashi Kiara Ch.hololive-EN </td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：9.9萬次·3 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/20-20-20.jpg" alt="Gawr Gura現">
+          <img src="./images/20-20.jpg" alt="Gawr Gura原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/20-20-20-20.jpg" title="Gawr Gura"></td>
+            <td width=220px>
+              <h2 title="[ORIGINAL] REFLECT - Gawr Gura">[ORIGINAL] REFLECT - Gawr Gura</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Gawr Gura Ch. hololive-EN">Gawr Gura Ch. hololive-EN</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：1598萬次·2 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/21-21-21.jpg" alt="Ninomae Ina'nis現">
+          <img src="./images/21-21.jpg" alt="Ninomae Ina'nis原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/21-21-21-21.jpg"
+                title="Ninomae Ina'nis Ch. hololive-EN"></td>
+            <td width=220px>
+              <h2 title="【Minecraft】Just Keep Digging">【Minecraft】Just Keep Digging</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Ninomae Ina'nis Ch.hololive-EN">Ninomae Ina'nis Ch.hololive-EN</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：11萬次·3年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/22-22-22.jpg" alt="Watson Amelia現">
+          <img src="./images/22-22.jpg" alt="Watson Amelia原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/22-22-22-22.jpg"
+                title="Watson Amelia Ch. hololive-EN"></td>
+            <td width=220px>
+              <h2 title="【ASMR】Goodnight & Thank You">【ASMR】Goodnight & Thank You</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Watson Amelia Ch. hololive-EN">Watson Amelia Ch. hololive-EN</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：30萬次·3 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/23-23-23.jpg" alt="Ceres Fauna現">
+          <img src="./images/23-23.jpg" alt="Ceres Fauna原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/23-23-23-23.jpg" title="Ceres Fauna Ch. hololive-EN">
+            </td>
+            <td width=220px>
+              <h2 title="【ASMR Roleplay】 Yandere Fauna Wants You to Stay Forever ♡ [Horror ASMR?]">【ASMR Roleplay】
+                Yandere Fauna Wants You to Stay Forever ♡ [Horror ASMR?]</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Ceres Fauna Ch. hololive-EN">Ceres Fauna Ch. hololive-EN</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：74萬次·1年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/24-24-24.jpg" alt="Ouro Kronii現">
+          <img src="./images/24-24.jpg" alt="Ouro Kronii原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/24-24-24-24.jpg" title="Ouro Kronii Ch. hololive-EN">
+            </td>
+            <td width=220px>
+              <h2 title="「Daydream」MV Teaser">「Daydream」MV Teaser</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Ouro Kronii Ch. hololive-EN">Ouro Kronii Ch. hololive-EN
+            <td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：22萬次·1 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/25-25-25.jpg" alt="Nanashi Mumei現">
+          <img src="./images/25-25.jpg" alt="Nanashi Mumei原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/25-25-25-25.jpg"
+                title="Nanashi Mumei Ch. hololive-EN"></td>
+            <td width=220px>
+              <h2 title="oh">oh</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Nanashi Mumei Ch.hololive-EN">Nanashi Mumei Ch.hololive-EN</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：97萬次·1 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/26-26-26.jpg" alt="Hakos Baelz現">
+          <img src="./images/26-26.jpg" alt="Hakos Baelz原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/26-26-26-26.jpg" title="Hakos Baelz Ch. hololive-EN">
+            </td>
+            <td width=220px>
+              <h2 title="【MV】HAPPY HALLOWEEN - junky || HAKOS BAELZ COVER">【MV】HAPPY HALLOWEEN - junky || HAKOS BAELZ
+                COVER</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="Hakos Baelz Ch. hololive-EN">Hakos Baelz Ch. hololive-EN</td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：73萬次·1 年前</td>
+          </tr>
+        </table>
+      </div>
+      <div id="col">
+        <div class="float-left">
+          <img src="./images/27-27-27.jpg" alt="IRyS現">
+          <img src="./images/27-27.jpg" alt="IRyS原">
+        </div>
+        <table>
+          <tr>
+            <td width=40px><img class="float-left2" src="./images/27-27-27-27.jpg" title="IRyS Ch. hololive-EN"></td>
+            <td width=220px>
+              <h2 title="Caesura of Despair - Animation MV">Caesura of Despair - Animation MV</h2>
+            </td>
+            <td width=40px><button id="button8"><i class="fa-solid fa-ellipsis-vertical"
+                  style="color: #ffffff;"></i></button></td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b" title="IRyS Ch. hololive-EN ">IRyS Ch. hololive-EN </td>
+          </tr>
+          <tr>
+            <td width=40px></td>
+            <td class="b">觀看次數：148萬次·2 年前</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+</body>
+
+</html>
